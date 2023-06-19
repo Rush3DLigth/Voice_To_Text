@@ -40,10 +40,10 @@ def audiorec_demo_app():
     with col_info:
         st.write('\n')  # add vertical spacer
         st.write('\n')  # add vertical spacer
-        st.write('The .wav audio data, as received in the backend Python code,'
-                 ' will be displayed below this message as soon as it has'
-                 ' been processed. [This informative message is not part of'
-                 ' the audio recorder and can be removed easily] 🎈')
+#        st.write('The .wav audio data, as received in the backend Python code,'
+#                ' will be displayed below this message as soon as it has'
+#                 ' been processed. [This informative message is not part of'
+#                 ' the audio recorder and can be removed easily] 🎈')
 
     if wav_audio_data is not None:
         # display audio data as received on the Python side
@@ -55,3 +55,4 @@ def audiorec_demo_app():
 if __name__ == '__main__':
     # call main function
     audiorec_demo_app()
+    
