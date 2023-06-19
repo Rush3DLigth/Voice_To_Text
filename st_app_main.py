@@ -5,7 +5,7 @@ from st_custom_components import st_audiorec
 
 # DESIGN implement changes to the standard streamlit UI/UX
 # --> optional, not relevant for the functionality of the component!
-st.set_page_config(page_title="streamlit_audio_recorder")
+st.set_page_config(page_title="audio recorder")
 # Design move app further up and remove top padding
 st.markdown('''<style>.css-1egvi7u {margin-top: -3rem;}</style>''',
             unsafe_allow_html=True)
