@@ -22,7 +22,7 @@ st.markdown('''<style>.css-nlntq9 a {color: #ff4c4b;}</style>''',
 def audiorec_demo_app():
 
     # TITLE and Creator information
-    st.title('streamlit audio recorder')
+    st.title('audio recorder')
     st.markdown('Implemented by '
         '[Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - '
         'view project source code on '
