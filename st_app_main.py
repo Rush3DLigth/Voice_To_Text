@@ -59,17 +59,17 @@ if __name__ == '__main__':
     # call main function
     audiorec_demo_app()
             
-    MODEL_NAME = "biodatlab/whisper-th-medium-combined"
-    lang = "th"
+    #MODEL_NAME = "biodatlab/whisper-th-medium-combined"
+    #lang = "th"
             
-    device = 0 if torch.cuda.is_available() else "cpu"
+    #device = 0 if torch.cuda.is_available() else "cpu"
             
-    pipe = pipeline(
-            task="automatic-speech-recognition",
-            model=MODEL_NAME,
-            chunk_length_s=30,
-            device=device,
-    )
-    transcriptions = pipe("audio.mp3",batch_size=16,return_timestamps=False,generate_kwargs={"language": "<|th|>", "task": "transcribe"})["text"]
-    print(transcriptions)
+    #pipe = pipeline(
+   #         task="automatic-speech-recognition",
+    #        model=MODEL_NAME,
+     #       chunk_length_s=30,
+     #       device=device,
+    #)
+    #transcriptions = pipe("audio.mp3",batch_size=16,return_timestamps=False,generate_kwargs={"language": "<|th|>", "task": "transcribe"})["text"]
+    #print(transcriptions)
     
