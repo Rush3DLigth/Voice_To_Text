@@ -2,6 +2,9 @@
 
 import streamlit as st
 from st_custom_components import st_audiorec
+import os
+import torch
+from transformers import pipeline
 
 # DESIGN implement changes to the standard streamlit UI/UX
 # --> optional, not relevant for the functionality of the component!
@@ -20,6 +23,7 @@ st.markdown('''<style>.css-nlntq9 a {color: #ff4c4b;}</style>''',
 
 
 def audiorec_demo_app():
+            
 
     # TITLE and Creator information
     st.title('Whisper voice to text from audio recorder')
@@ -51,6 +55,19 @@ def audiorec_demo_app():
         with col_playback:
             st.audio(wav_audio_data, format='audio/wav')
 
+def Whisper():
+            
+    MODEL_NAME = "biodatlab/whisper-th-medium-combined"
+    lang = "th"
+            
+    device = 0 if torch.cuda.is_available() else "cpu"
+            
+    pipe = pipeline(
+            task="automatic-speech-recognition",
+            model=MODEL_NAME,
+            chunk_length_s=30,
+            device=device,
+    )
 
 if __name__ == '__main__':
     # call main function
