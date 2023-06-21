@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+pandas-profiling
+streamlit-pandas-profiling
+Flask
+scikit-learn
+pip-upgrade
+yellowbrick
+more-itertools
+scipy
+random11
