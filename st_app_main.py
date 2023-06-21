@@ -72,4 +72,10 @@ def Whisper():
 if __name__ == '__main__':
     # call main function
     audiorec_demo_app()
+    transcriptions = pipe(
+    "audio.mp3",
+    batch_size=16,
+    return_timestamps=False,
+    generate_kwargs={"language": "<|th|>", "task": "transcribe"})["text"]
+    print(transcriptions)
     
