@@ -55,7 +55,9 @@ def audiorec_demo_app():
         with col_playback:
             st.audio(wav_audio_data, format='audio/wav')
 
-def Whisper():
+if __name__ == '__main__':
+    # call main function
+    audiorec_demo_app()
             
     MODEL_NAME = "biodatlab/whisper-th-medium-combined"
     lang = "th"
@@ -74,9 +76,4 @@ def Whisper():
     return_timestamps=False,
     generate_kwargs={"language": "<|th|>", "task": "transcribe"})["text"]
     print(transcriptions)
-
-if __name__ == '__main__':
-    # call main function
-    audiorec_demo_app()
-    Whisper()
     
