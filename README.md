@@ -15,6 +15,11 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 
 
 ## Component Setup - step by step
+### Install it with pip:
+```bash
+pip install streamlit-audiorecorder
+```
+
 **1.** Import and install relevant libraries to your Python project. 
 ```
 import os
